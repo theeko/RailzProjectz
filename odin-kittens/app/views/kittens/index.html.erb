@@ -1,0 +1,6 @@
+<div class="col md-8 col-md-offset-2">
+    <% @kittens.each do |kitten| %>
+      <p><%= kitten.name %></p>
+      <%= link_to kitten.name, kitten_path(kitten),method: :delete, :data => {:confirm => 'Are you sure?'} %><br />
+    <% end %>
+</div>

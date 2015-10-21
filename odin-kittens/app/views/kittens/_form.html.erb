@@ -1,0 +1,19 @@
+<section class="col-md-8 col-md-offset-2">
+    <%= form_for @kitten do |f| %>
+    
+      <%= f.label :name %>
+      <%= f.text_field :name, class:"form-control" %>
+      
+      <%= f.label :age %>
+      <%= f.number_field :age, class:"form-control" %>
+      
+      <%= f.label :cuteness %>
+      <%= f.text_field :cuteness, class:"form-control" %>
+    
+      <%= f.label :softness %>
+      <%= f.text_field :softness, class:"form-control" %>
+      
+      <%= f.submit @kitten.new_record? ? "Create Yar Kitten" : "Update Yar Kitten", class:"btn btn-primary" %>
+    
+    <% end %>
+</section>
